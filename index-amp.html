@@ -1,0 +1,260 @@
+<!doctype html>
+<html ⚡ lang="en">
+<head>
+  <meta charset="utf-8">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <title>Brandi - AMP Version</title>
+  <link rel="canonical" href="https://YOUR_USERNAME.github.io/AKIGoogleAMP/index.html">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <style amp-custom>
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800&display=swap');
+    
+    body { margin: 0; font-family: 'Open Sans', Arial, sans-serif; background: #fff; color: #222; }
+    a { color: #21c2b6; text-decoration: none; }
+    
+    .container { max-width: 1170px; margin: 0 auto; padding: 35px 15px; }
+    
+    #navigation { position: fixed; z-index: 10; left: 0; top: 0; width: 100%; background: rgba(0,0,0,0.3); }
+    #navigation .container { display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; }
+    #navigation nav ul { display: flex; gap: 25px; list-style: none; margin: 0; padding: 0; }
+    #navigation nav li a { color: #fff; font-size: 16px; font-weight: 400; letter-spacing: 0.8px; text-transform: uppercase; }
+    #navigation nav li a:hover { color: #24e48d; }
+    
+    #slider { min-height: 700px; display: flex; align-items: center; justify-content: center; position: relative; background: linear-gradient(180deg, rgba(15,18,22,0.94) 0%, rgba(29,51,43,0.43) 100%); text-align: center; color: #fff; }
+    #slider .hero-content { position: relative; z-index: 2; padding-top: 96px; }
+    #slider h2 { margin: 0 0 22px 0; font-size: 48px; font-weight: 300; }
+    #slider h2 span { font-weight: 800; color: #24e48d; }
+    #slider h3 { font-size: 24px; margin: 0 0 10px 0; }
+    #slider h3 .color { color: #24e48d; font-weight: 700; }
+    #slider .social-links { display: flex; justify-content: center; gap: 16px; margin-top: 25px; padding: 0; list-style: none; }
+    #slider .social-links a { color: #fff; font-size: 21px; }
+    
+    #features { background: #fff; padding: 70px 0; }
+    #features h2 { text-align: center; color: #222; font-weight: 700; font-size: 36px; margin-bottom: 42px; }
+    .feature-items { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .feature { background: #fafdff; border-radius: 10px; box-shadow: 0 1px 4px 0 rgba(0,0,0,.07); flex: 1 1 300px; max-width: 350px; text-align: center; padding: 32px 20px; }
+    .feature i { color: #21c2b6; font-size: 38px; display: block; margin-bottom: 10px; }
+    .feature h3 { color: #222; font-size: 22px; font-weight: 700; margin: 8px 0 15px; }
+    .feature p { color: #706e6e; font-size: 16px; }
+    
+    #works { background: #f2f2f2; padding: 70px 0; }
+    #works h2 { text-align: center; font-weight: 700; font-size: 36px; margin-bottom: 12px; }
+    #works > p { text-align: center; color: #888; margin-bottom: 34px; }
+    .work-filter { display: flex; justify-content: center; list-style: none; margin-bottom: 38px; gap: 20px; padding: 0; }
+    .work-filter li a { color: #888; font-weight: 600; padding: 8px 15px; border-radius: 4px; }
+    .work-filter li a.active { background: #21c2b6; color: #fff; }
+    .project-wrapper { display: flex; flex-wrap: wrap; gap: 22px; justify-content: center; }
+    .project-wrapper figure { width: 260px; margin: 0; border-radius: 7px; overflow: hidden; box-shadow: 0 1px 8px 0 rgba(0,0,0,0.07); }
+    
+    #team { background: #fff; padding: 70px 0; }
+    #team h2 { text-align: center; font-weight: 700; font-size: 36px; margin-bottom: 12px; }
+    .team-members { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; }
+    .team-members figure { background: #fafbfb; border-radius: 10px; width: 220px; text-align: center; padding: 26px 12px 20px; margin: 0; }
+    .team-members figcaption h4 { margin: 10px 0 5px; font-size: 18px; }
+    .team-members figcaption span { font-size: 14px; color: #21c2b6; }
+    
+    #facts { background: #222; color: #fff; padding: 70px 0; text-align: center; }
+    #facts h2 { font-size: 25px; margin-bottom: 36px; }
+    .facts-items { display: flex; justify-content: center; gap: 38px; flex-wrap: wrap; }
+    .fact { border: 2.5px solid #fff; border-radius: 50%; width: 120px; height: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+    .fact i { font-size: 32px; color: #21c2b6; margin-bottom: 6px; }
+    .fact strong { font-size: 28px; font-weight: 800; }
+    .fact p { margin: 2px 0; font-size: 12.5px; }
+    
+    #contact { background: #fff; padding: 76px 0; }
+    #contact h2 { text-align: center; font-weight: 700; font-size: 34px; margin-bottom: 30px; }
+    .contact-content { display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; }
+    .contact-address { flex: 1 1 200px; font-size: 16px; }
+    .contact-address h3 { font-size: 18px; }
+    .contact-form { flex: 2 1 360px; }
+    .contact-form input, .contact-form textarea { width: 100%; padding: 13px 12px; border: 1.5px solid #e7e7e7; border-radius: 7px; font-size: 15px; margin-bottom: 13px; }
+    .contact-form button { background: #21c2b6; color: #fff; font-weight: 600; border: none; border-radius: 7px; padding: 13px 27px; cursor: pointer; font-size: 17px; }
+    
+    #footer { background: #222; color: #fff; padding: 40px 0; }
+    #footer .container { display: flex; flex-wrap: wrap; gap: 38px; }
+    .footer-single { flex: 1 1 200px; min-width: 190px; }
+    .footer-single h6 { color: #21c2b6; font-size: 16px; font-weight: 700; text-transform: uppercase; }
+    .footer-single ul { list-style: none; padding: 0; }
+    .footer-single ul li a { color: #fff; font-size: 14px; }
+    
+    @media (max-width: 768px) {
+      #slider h2 { font-size: 32px; }
+      #navigation nav ul { flex-direction: column; gap: 10px; }
+    }
+  </style>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <header id="navigation">
+    <div class="container">
+      <amp-img src="img/logo.png" width="120" height="34" alt="Brandi Logo"></amp-img>
+      <nav>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="slider">
+    <div class="hero-content">
+      <h2>Meet <span>Brandi!</span></h2>
+      <h3><span class="color">/creative</span> one page template.</h3>
+      <p>We are a team of professionals</p>
+      <ul class="social-links">
+        <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a></li>
+        <li><a href="#"><i class="fa fa-facebook fa-lg"></i></a></li>
+        <li><a href="#"><i class="fa fa-google-plus fa-lg"></i></a></li>
+        <li><a href="#"><i class="fa fa-dribbble fa-lg"></i></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="container">
+      <h2>Features</h2>
+      <div class="feature-items">
+        <div class="feature">
+          <i class="fa fa-lightbulb-o fa-2x"></i>
+          <h3>Branding</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+        </div>
+        <div class="feature">
+          <i class="fa fa-pencil fa-2x"></i>
+          <h3>Development</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+        </div>
+        <div class="feature">
+          <i class="fa fa-bullhorn fa-2x"></i>
+          <h3>Consulting</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="works">
+    <div class="container">
+      <h2>Works</h2>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+      <ul class="work-filter">
+        <li><a href="#" class="active">All</a></li>
+        <li><a href="#">Branding</a></li>
+        <li><a href="#">Web</a></li>
+        <li><a href="#">Logo Design</a></li>
+        <li><a href="#">Photography</a></li>
+      </ul>
+      <div class="project-wrapper">
+        <figure><amp-img src="img/works/item-1.jpg" width="260" height="180" layout="responsive" alt="Work 1"></amp-img></figure>
+        <figure><amp-img src="img/works/item-2.jpg" width="260" height="180" layout="responsive" alt="Work 2"></amp-img></figure>
+        <figure><amp-img src="img/works/item-3.jpg" width="260" height="180" layout="responsive" alt="Work 3"></amp-img></figure>
+        <figure><amp-img src="img/works/item-4.jpg" width="260" height="180" layout="responsive" alt="Work 4"></amp-img></figure>
+        <figure><amp-img src="img/works/item-5.jpg" width="260" height="180" layout="responsive" alt="Work 5"></amp-img></figure>
+        <figure><amp-img src="img/works/item-6.jpg" width="260" height="180" layout="responsive" alt="Work 6"></amp-img></figure>
+        <figure><amp-img src="img/works/item-7.jpg" width="260" height="180" layout="responsive" alt="Work 7"></amp-img></figure>
+        <figure><amp-img src="img/works/item-8.jpg" width="260" height="180" layout="responsive" alt="Work 8"></amp-img></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="container">
+      <h2>Meet Our Team</h2>
+      <div class="team-members">
+        <figure>
+          <amp-img src="img/team/member-1.png" width="120" height="120" layout="intrinsic" alt="John Doe"></amp-img>
+          <figcaption><h4>John Filmr Doe</h4><span>Managing Director</span></figcaption>
+        </figure>
+        <figure>
+          <amp-img src="img/team/member-2.png" width="120" height="120" layout="intrinsic" alt="Martin Matrone"></amp-img>
+          <figcaption><h4>Martin Matrone</h4><span>Lead Developer</span></figcaption>
+        </figure>
+        <figure>
+          <amp-img src="img/team/member-3.png" width="120" height="120" layout="intrinsic" alt="Steve Flaulkin"></amp-img>
+          <figcaption><h4>Steve Flaulkin</h4><span>Sr. UI Designer</span></figcaption>
+        </figure>
+        <figure>
+          <amp-img src="img/team/member-1.png" width="120" height="120" layout="intrinsic" alt="Chystine Hineu"></amp-img>
+          <figcaption><h4>Chystine Hineu</h4><span>Lead Designer</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="facts">
+    <div class="container">
+      <h2>Some Fun Facts</h2>
+      <div class="facts-items">
+        <div class="fact"><i class="fa fa-clock-o fa-2x"></i><strong>3200</strong><p>Hours of Work</p></div>
+        <div class="fact"><i class="fa fa-users fa-2x"></i><strong>120</strong><p>Satisfied Clients</p></div>
+        <div class="fact"><i class="fa fa-rocket fa-2x"></i><strong>360</strong><p>Projects Delivered</p></div>
+        <div class="fact"><i class="fa fa-trophy fa-2x"></i><strong>42</strong><p>Awards Won</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Let's Discuss</h2>
+      <div class="contact-content">
+        <div class="contact-address">
+          <h3><i class="fa fa-map-marker"></i> 2345 Setwant natrer, 1234</h3>
+          <p>Washington, United States.</p>
+          <p><i class="fa fa-phone"></i> (401) 1234 567</p>
+          <p><i class="fa fa-envelope"></i> hello@brandi.com</p>
+        </div>
+        <div class="contact-form">
+          <h3>Say hello!</h3>
+          <form method="post" action-xhr="https://example.com/subscribe" target="_top">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Message" required></textarea>
+            <button type="submit">Send message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-single">
+        <amp-img src="img/footer-logo.png" width="95" height="30" alt="Footer Logo"></amp-img>
+        <p>eusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+      </div>
+      <div class="footer-single">
+        <h6>Subscribe</h6>
+        <form method="post" action-xhr="https://example.com/subscribe" target="_top">
+          <input type="email" name="email" placeholder="Email" required>
+          <button type="submit">→</button>
+        </form>
+      </div>
+      <div class="footer-single">
+        <h6>Explore</h6>
+        <ul>
+          <li><a href="#">Inside Us</a></li>
+          <li><a href="#">Flickr</a></li>
+          <li><a href="#">Google</a></li>
+          <li><a href="#">Forum</a></li>
+        </ul>
+      </div>
+      <div class="footer-single">
+        <h6>Support</h6>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Market Blog</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Pressroom</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
