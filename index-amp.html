@@ -12,6 +12,42 @@
   <style amp-custom>
     @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800&display=swap');
     
+    /* FontAwesome 4.7 Icons */
+    @font-face {
+      font-family: 'FontAwesome';
+      src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+    
+    .fa {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .fa-lg { font-size: 1.33333em; line-height: 0.75em; vertical-align: -15%; }
+    .fa-2x { font-size: 2em; }
+    .fa-twitter:before { content: "\f099"; }
+    .fa-facebook:before { content: "\f09a"; }
+    .fa-google-plus:before { content: "\f0d5"; }
+    .fa-dribbble:before { content: "\f17d"; }
+    .fa-behance:before { content: "\f1b4"; }
+    .fa-lightbulb-o:before { content: "\f0eb"; }
+    .fa-pencil:before { content: "\f040"; }
+    .fa-bullhorn:before { content: "\f0a1"; }
+    .fa-clock-o:before { content: "\f017"; }
+    .fa-users:before { content: "\f0c0"; }
+    .fa-rocket:before { content: "\f135"; }
+    .fa-trophy:before { content: "\f091"; }
+    .fa-map-marker:before { content: "\f041"; }
+    .fa-phone:before { content: "\f095"; }
+    .fa-envelope:before { content: "\f0e0"; }
+    
     * { box-sizing: border-box; }
     body { margin: 0; font-family: 'Open Sans', Arial, sans-serif; background: #fff; color: #222; }
     a { color: #21c2b6; text-decoration: none; }
@@ -43,7 +79,7 @@
     #features h2 { text-align: center; color: #222; font-weight: 700; font-size: 36px; margin-bottom: 42px; }
     .feature-items { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
     .feature { background: #fafdff; border-radius: 10px; box-shadow: 0 1px 4px 0 rgba(0,0,0,.07); flex: 1 1 300px; max-width: 350px; margin: 12px; text-align: center; padding: 32px 20px 26px 20px; }
-    .feature .icon { color: #21c2b6; font-size: 38px; margin-bottom: 10px; }
+    .feature i { color: #21c2b6; font-size: 38px; margin-bottom: 10px; display: block; }
     .feature h3 { color: #222; font-size: 22px; font-weight: 700; margin: 8px 0 15px; }
     .feature p { color: #706e6e; font-size: 16px; }
     
@@ -67,12 +103,13 @@
     .team-members figcaption span { font-size: 14px; color: #21c2b6; }
     
     /* Facts */
-    #facts { background: #222; min-height: 330px; position: relative; padding: 70px 0; }
-    #facts .facts-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; opacity: 0.3; }
+    #facts { min-height: 330px; position: relative; padding: 70px 0; }
+    #facts .facts-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+    #facts .facts-overlay { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: linear-gradient(185deg,rgba(21,26,34,0.93) 64%,rgba(21,26,34,0.19) 100%); z-index: 1; }
     #facts h2 { text-align: center; color: #fff; font-size: 25px; position: relative; z-index: 2; margin-bottom: 36px; }
     .facts-items { position: relative; z-index: 2; display: flex; justify-content: center; gap: 38px; flex-wrap: wrap; }
     .fact { background: transparent; border-radius: 50%; border: 2.5px solid #fff; text-align: center; width: 120px; height: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
-    .fact .icon { font-size: 32px; color: #21c2b6; margin-bottom: 6px; }
+    .fact i { font-size: 32px; color: #21c2b6; margin-bottom: 6px; }
     .fact strong { font-size: 28px; display: block; margin: 0; font-weight: 800; color: #fff; }
     .fact p { color: #fff; margin: 2px 0; font-size: 12.5px; }
     
@@ -81,16 +118,17 @@
     #contact h2 { text-align: center; font-weight: 700; font-size: 34px; margin-bottom: 40px; }
     .contact-content { display: flex; flex-wrap: wrap; gap: 40px 30px; justify-content: center; align-items: flex-start; }
     .contact-address { flex: 1 1 200px; min-width: 200px; font-size: 16px; color: #444; }
-    .contact-address h3 { font-size: 18px; margin-bottom: 10px; }
+    .contact-address h3 { font-size: 18px; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
     .contact-address p { margin: 6px 0; font-size: 15px; }
+    .contact-address i { color: #21c2b6; min-width: 18px; }
     .contact-form { flex: 2 1 360px; min-width: 320px; }
     .contact-form h3 { font-size: 19px; font-weight: 700; margin-bottom: 11px; }
     .input-group { display: flex; gap: 20px; margin-bottom: 13px; }
     .input-group input { flex: 1; padding: 13px 12px; border: 1.5px solid #e7e7e7; border-radius: 7px; font-size: 15px; }
     textarea { width: 100%; margin-bottom: 11px; padding: 13px 12px; border: 1.5px solid #e7e7e7; border-radius: 7px; font-size: 15px; resize: vertical; min-height: 68px; }
     button { background: #21c2b6; color: #fff; font-weight: 600; border: none; border-radius: 7px; padding: 13px 27px; cursor: pointer; font-size: 17px; }
-    .footer-social { display: flex; gap: 10px; list-style: none; padding-left: 0; }
-    .footer-social a { color: #21c2b6; font-size: 24px; padding: 5px; }
+    .footer-social { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; list-style: none; padding-left: 0; flex: 1 1 80px; }
+    .footer-social a { color: #21c2b6; font-size: 24px; }
     
     /* Footer */
     #footer { background: #222; color: #fff; padding: 40px 0 14px 0; }
@@ -104,23 +142,6 @@
     form.subscribe { display: flex; gap: 7px; margin-bottom: 8px; }
     form.subscribe input { padding: 7px 14px; background: #292929; color: #fff; border: none; border-radius: 5px; }
     form.subscribe button { background: #21c2b6; color: #fff; border: none; padding: 7px 16px; border-radius: 5px; }
-    
-    /* Icons (FontAwesome replacement) */
-    .fa-twitter:before { content: "𝕏"; }
-    .fa-facebook:before { content: "f"; }
-    .fa-google-plus:before { content: "G+"; }
-    .fa-dribbble:before { content: "⛹"; }
-    .fa-behance:before { content: "Bē"; }
-    .fa-lightbulb-o:before { content: "💡"; }
-    .fa-pencil:before { content: "✏️"; }
-    .fa-bullhorn:before { content: "📢"; }
-    .fa-clock-o:before { content: "⏰"; }
-    .fa-users:before { content: "👥"; }
-    .fa-rocket:before { content: "🚀"; }
-    .fa-trophy:before { content: "🏆"; }
-    .fa-map-marker:before { content: "📍"; }
-    .fa-phone:before { content: "📞"; }
-    .fa-envelope:before { content: "✉️"; }
     
     /* Responsive */
     @media (max-width: 768px) {
@@ -155,10 +176,10 @@
       <h3><span class="color">/creative</span> one page template.</h3>
       <p>We are a team of professionals</p>
       <ul class="social-links">
-        <li><a href="#"><span class="fa-twitter">𝕏</span></a></li>
-        <li><a href="#"><span class="fa-facebook">f</span></a></li>
-        <li><a href="#"><span class="fa-google-plus">G+</span></a></li>
-        <li><a href="#"><span class="fa-dribbble">⛹</span></a></li>
+        <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a></li>
+        <li><a href="#"><i class="fa fa-facebook fa-lg"></i></a></li>
+        <li><a href="#"><i class="fa fa-google-plus fa-lg"></i></a></li>
+        <li><a href="#"><i class="fa fa-dribbble fa-lg"></i></a></li>
       </ul>
     </div>
   </section>
@@ -168,17 +189,17 @@
       <h2>Features</h2>
       <div class="feature-items">
         <div class="feature">
-          <div class="icon">💡</div>
+          <i class="fa fa-lightbulb-o fa-2x"></i>
           <h3>Branding</h3>
           <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
         </div>
         <div class="feature">
-          <div class="icon">✏️</div>
+          <i class="fa fa-pencil fa-2x"></i>
           <h3>Development</h3>
           <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
         </div>
         <div class="feature">
-          <div class="icon">📢</div>
+          <i class="fa fa-bullhorn fa-2x"></i>
           <h3>Consulting</h3>
           <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
         </div>
@@ -235,14 +256,15 @@
   </section>
 
   <section id="facts">
-    <amp-img class="facts-bg" src="img/city.jpg" alt="Background" layout="fill" object-fit="cover"></amp-img>
+    <amp-img class="facts-bg" src="img/parallax/city.jpg" alt="City Background" layout="fill" object-fit="cover"></amp-img>
+    <div class="facts-overlay"></div>
     <div class="container">
       <h2>Some Fun Facts</h2>
       <div class="facts-items">
-        <div class="fact"><div class="icon">⏰</div><strong>3200</strong><p>Hours of Work</p></div>
-        <div class="fact"><div class="icon">👥</div><strong>120</strong><p>Satisfied Clients</p></div>
-        <div class="fact"><div class="icon">🚀</div><strong>360</strong><p>Projects Delivered</p></div>
-        <div class="fact"><div class="icon">🏆</div><strong>42</strong><p>Awards Won</p></div>
+        <div class="fact"><i class="fa fa-clock-o fa-2x"></i><strong>3200</strong><p>Hours of Work</p></div>
+        <div class="fact"><i class="fa fa-users fa-2x"></i><strong>120</strong><p>Satisfied Clients</p></div>
+        <div class="fact"><i class="fa fa-rocket fa-2x"></i><strong>360</strong><p>Projects Delivered</p></div>
+        <div class="fact"><i class="fa fa-trophy fa-2x"></i><strong>42</strong><p>Awards Won</p></div>
       </div>
     </div>
   </section>
@@ -252,10 +274,10 @@
       <h2>Let's Discuss</h2>
       <div class="contact-content">
         <div class="contact-address">
-          <h3>📍 2345 Setwant natrer, 1234</h3>
+          <h3><i class="fa fa-map-marker"></i> 2345 Setwant natrer, 1234</h3>
           <p>Washington, United States.</p>
-          <p>📞 (401) 1234 567</p>
-          <p>✉️ hello@brandi.com</p>
+          <p><i class="fa fa-phone"></i> (401) 1234 567</p>
+          <p><i class="fa fa-envelope"></i> hello@brandi.com</p>
         </div>
         <div class="contact-form">
           <h3>Say hello!</h3>
@@ -269,10 +291,10 @@
           </form>
         </div>
         <ul class="footer-social">
-          <li><a href="#">Bē</a></li>
-          <li><a href="#">𝕏</a></li>
-          <li><a href="#">⛹</a></li>
-          <li><a href="#">f</a></li>
+          <li><a href="#"><i class="fa fa-behance fa-2x"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li>
+          <li><a href="#"><i class="fa fa-dribbble fa-2x"></i></a></li>
+          <li><a href="#"><i class="fa fa-facebook fa-2x"></i></a></li>
         </ul>
       </div>
     </div>
